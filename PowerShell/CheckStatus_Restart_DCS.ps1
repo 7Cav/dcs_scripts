@@ -11,7 +11,7 @@ $RestartFlag = 0
 $MainServer1 = '"D:\Eagle Dynamics\DCS World Server\bin\DCS_server.exe"  --server --norender --webgui -w Main_Server_1'
 $MainServer1Check = 0
 
-# Tactical Realism 1
+# Tactical Realism 2
 $MainServer2 = '"D:\Eagle Dynamics\DCS World Server\bin\DCS_server.exe"  --server --norender --webgui -w Main_Server_2'
 $MainServer2Check = 0
 
