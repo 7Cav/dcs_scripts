@@ -41,7 +41,7 @@ foreach ($line in $ProcessCom){
         cms1 = $line.CommandLine -contains $MainServer1
         cms2 = $line.CommandLine -contains $MainServer2
     
-        # Compare Traianing Server 1
+        # Compare Training Server 1
         cts1 = $line.CommandLine -contains $TrainingServer1
         cts2 = $line.CommandLine -contains $TrainingServer2
         cts3 = $line.CommandLine -contains $TrainingServer3
@@ -93,28 +93,28 @@ foreach ($line in $ProcessCom){
 if ($MainServer1Check -eq 0){
     Start-Process "C:\Users\DCSGameStaff\Saved Games\_-Startup_Scripts-_\DCS\DCS_StartMainServer_1.bat"
     $RestartFlag = 1
-    Add-Content $LogFilePath "Main Server 1 was done, and is being restarted"
+    Add-Content $LogFilePath "Main Server 1 was down, and is being restarted"
 }
 if ($MainServer2Check -eq 0){
     $RestartFlag = 1
     Start-Process "C:\Users\DCSGameStaff\Saved Games\_-Startup_Scripts-_\DCS\DCS_StartMainServer_2.bat"
-    Add-Content $LogFilePath "Main Server 2 was done, and is being restarted"
+    Add-Content $LogFilePath "Main Server 2 was down, and is being restarted"
 }
 
 if ($TrainingServer1Check -eq 0){
     $RestartFlag = 1
     Start-Process "C:\Users\DCSGameStaff\Saved Games\_-Startup_Scripts-_\DCS\DCS_StartTrainingServer_1.bat"
-    Add-Content $LogFilePath "Training Server 1 was done, and is being restarted"
+    Add-Content $LogFilePath "Training Server 1 was down, and is being restarted"
 }
 if ($TrainingServer2Check -eq 0){
     $RestartFlag = 1
     Start-Process "C:\Users\DCSGameStaff\Saved Games\_-Startup_Scripts-_\DCS\DCS_StartTrainingServer_2.bat"
-    Add-Content $LogFilePath "Training Server 2 was done, and is being restarted"
+    Add-Content $LogFilePath "Training Server 2 was down, and is being restarted"
 }
 # if ($TrainingServer3Check -eq 0){
     #     $RestartFlag = 1
     #     # Start-Process "C:\Users\DCSGameStaff\Saved Games\_-Startup_Scripts-_\DCS\DCS_StartTrainingServer_3.bat"
-    #     Add-CONTENT $LogFilePath "Training Server 3 was done, and is being restarted"
+    #     Add-CONTENT $LogFilePath "Training Server 3 was down, and is being restarted"
     # }
 
     
