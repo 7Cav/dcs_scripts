@@ -3,16 +3,15 @@ $CurrentTime = Get-Date -format "dd-MMM-yyyy HH:mm:ss"
 $ProcessCom = Get-WmiObject Win32_Process -Filter "name = '$Process'" | Select-Object Commandline
 $LogFilePath = "C:\Users\DCSGameStaff\Documents\dcs_scripts\PowerShell\Logs\CheckStatus_Restart_DCS.log"
 
-# - Create flags for each instance used to determine the instance is running
 $RestartFlag = 0
 
+# - Create flags for each instance, which will be used to determine if the instance is running
+
 # Tactical Realism 1
-# $MainServer1 = '--server --norender --webgui -w Main_Server_1'
 $MainServer1 = '"D:\Eagle Dynamics\DCS World Server\bin\DCS_server.exe"  --server --norender --webgui -w Main_Server_1'
 $MainServer1Check = 0
 
 # Tactical Realism 1
-# $MainServer1 = '--server --norender --webgui -w Main_Server_2'
 $MainServer2 = '"D:\Eagle Dynamics\DCS World Server\bin\DCS_server.exe"  --server --norender --webgui -w Main_Server_2'
 $MainServer2Check = 0
 
@@ -30,8 +29,8 @@ $TrainingServer3Check = 0
 
 $LogHeader = "Restart Script is Starting. Start Time: " + $CurrentTime
 Add-Content $LogFilePath  $LogHeader
-Add-Content $LogFilePath "-------------------------"
 # Add-Content $LogFilePath $ProcessCom
+Add-Content $LogFilePath "-------------------------"
 
 
 
